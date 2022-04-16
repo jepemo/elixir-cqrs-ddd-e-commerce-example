@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  db:
+    container_name: pg_ecommerce_container  
+    image: postgres:latest
+    restart: always
+    volumes:
+      - './postgres_data:/var/lib/postgresql/data'
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+  pgadmin:
+    container_name: pgadmin4_ecommerce_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq_ecommerce_container'
+    ports:
+        - 5672:5672
+        - 15672:15672
