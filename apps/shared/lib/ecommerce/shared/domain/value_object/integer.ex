@@ -12,6 +12,12 @@ defmodule Ecommerce.Shared.Domain.ValueObject.Integer do
     }
   end
 
+  def new(value) when is_binary(value) do
+    with {number, _res} <- Integer.parse(value) do
+      new(number)
+    end
+  end
+
   def new(value) do
     raise ArgumentError, message: "#{value} is not a valid integer value"
   end

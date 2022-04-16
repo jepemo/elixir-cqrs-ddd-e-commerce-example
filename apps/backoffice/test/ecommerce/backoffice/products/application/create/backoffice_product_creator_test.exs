@@ -2,9 +2,9 @@ defmodule Ecommerce.Backoffice.Test.Products.Application.Create.BackofficeProduc
   use ExUnit.Case
 
   alias Ecommerce.Backoffice.Products.Application.Create.BackofficeProductCreator
+  alias Ecommerce.Backoffice.Test.Products.Domain.BackofficeProductQuantityMother
   alias Ecommerce.Shared.Test.Domain.Products.ProductIdMother
   alias Ecommerce.Shared.Test.Domain.Products.ProductNameMother
-  alias Ecommerce.Backoffice.Test.Products.Domain.BackofficeProductQuantityMother
 
   test "should create a product" do
 
