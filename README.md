@@ -11,6 +11,7 @@ Example of an e-commerce application with CQRS, DDD, Hexagonal Architecture usin
 - [ ] RabbitMQ Implementation
 - [ ] Web uses cases implementation
 - [ ] Macros for creating command, events, and queries
+- [ ] Monitoring
 
 ## Use cases
 - [ ] Create product (backoffice)
