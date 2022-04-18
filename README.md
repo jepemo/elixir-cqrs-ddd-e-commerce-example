@@ -4,10 +4,13 @@ Example of an e-commerce application with CQRS, DDD, Hexagonal Architecture usin
 ## TODO
 
 - [x] Umbrella Project
+- [x] PostgreSQL
+- [ ] InMemory(command bus, query bus and event bus)
 - [ ] Phoenix Assets
 - [ ] Phoenix watcher
-- [ ] RabbitMQ
-- [ ] PostgreSQL
+- [ ] RabbitMQ Implementation
+- [ ] Web uses cases implementation
+- [ ] Macros for creating command, events, and queries
 
 ## Use cases
 - [ ] Create product (backoffice)
