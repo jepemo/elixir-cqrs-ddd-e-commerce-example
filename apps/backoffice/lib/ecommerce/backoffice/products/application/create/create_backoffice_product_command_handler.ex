@@ -1,5 +1,5 @@
-defmodule Ecommerce.Backoffice.Application.Create.CreateBackofficeProductCommandHandler do
-  alias Ecommerce.Backoffice.Application.Create.CreateBackofficeProductCommand
+defmodule Ecommerce.Backoffice.Products.Application.Create.CreateBackofficeProductCommandHandler do
+  alias Ecommerce.Backoffice.Products.Application.Create.CreateBackofficeProductCommand
   alias Ecommerce.Backoffice.Products.Application.Create.BackofficeProductCreator
   alias Ecommerce.Backoffice.Products.Domain.BackofficeProductQuantity
   alias Ecommerce.Shared.Domain.Products.ProductId

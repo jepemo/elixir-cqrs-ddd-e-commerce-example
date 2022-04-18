@@ -89,6 +89,17 @@ config :backoffice,
        :event_bus,
        Ecommerce.Shared.Infrastructure.Bus.Event.RabbitMQ.RabbitMQEventBus
 
+config :backoffice,
+       :command_bus,
+       Ecommerce.Shared.Test.Infrastructure.Bus.Command.InMemoryCommandBus
+
+config :backoffice,
+       :in_memory_command_bus_deps,
+       [
+         {Ecommerce.Backoffice.Products.Application.Create.CreateBackofficeProductCommand,
+          Ecommerce.Backoffice.Products.Application.Create.CreateBackofficeProductCommandHandler}
+       ]
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
