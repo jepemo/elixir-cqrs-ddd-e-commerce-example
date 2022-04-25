@@ -5,7 +5,7 @@ defmodule Ecommerce.Backoffice.Test.Products.Application.Create.CreateBackoffice
   alias Ecommerce.Shared.Domain.ValueObject.Uuid
 
   test "should create a product" do
-    CreateBackofficeProductCommand.new(Uuid.random_value(), "name1", "10")
+    CreateBackofficeProductCommand.new(id: Uuid.random_value(), name: "name1", quantity: "10")
     |> command_bus().dispatch()
     |> (&(assert &1 == :ok)).()
   end

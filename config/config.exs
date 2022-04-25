@@ -87,7 +87,7 @@ config :backoffice,
 
 config :backoffice,
        :event_bus,
-       Ecommerce.Shared.Infrastructure.Bus.Event.RabbitMQ.RabbitMQEventBus
+       Ecommerce.Shared.Test.Infrastructure.Bus.Event.InMemoryEventBus
 
 config :backoffice,
        :command_bus,

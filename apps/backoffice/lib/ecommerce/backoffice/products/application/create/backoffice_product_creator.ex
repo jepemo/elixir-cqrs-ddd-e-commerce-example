@@ -9,14 +9,14 @@ defmodule Ecommerce.Backoffice.Products.Application.Create.BackofficeProductCrea
   @spec create(ProductId.t(), ProductName.t(), BackofficeProductQuantity.t()) :: :ok | {:error, String.t()}
   def create(id, name, quantity) do
     with {:ok, product, events} <- BackofficeProduct.create(id, name, quantity),
-      :ok <- repository().save(product),
+      :ok <- product_repository().save(product),
       :ok <- event_bus().publish(events) do
       :ok
     end
   end
 
-  @spec repository() :: BackofficeProductRepository.t()
-  defp repository() do
+  @spec product_repository() :: BackofficeProductRepository.t()
+  defp product_repository() do
     Application.get_env(:backoffice, :product_repository)
   end
 
